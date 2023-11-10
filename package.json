@@ -1,6 +1,6 @@
 {
   "name": "@evo/graphql-tag-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "More optimized loader for lib graphql-tag",
   "main": "./index.js",
   "sideEffects": false,
@@ -10,7 +10,8 @@
     "prettier-fix": "prettier . --write"
   },
   "files": [
-    "utils.js"
+    "utils.js",
+    "index.js"
   ],
   "author": "",
   "license": "MIT",
