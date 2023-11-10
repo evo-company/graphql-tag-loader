@@ -1,0 +1,14 @@
+fragment CategoryFragment on Category {
+    id
+    images
+    alias
+}
+
+query CategoryQuery($alias: String) {
+    category(alias: $alias) {
+        id
+        title
+        url
+        ...CategoryFragment
+    }
+}

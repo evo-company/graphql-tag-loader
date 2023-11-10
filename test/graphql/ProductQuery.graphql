@@ -1,0 +1,11 @@
+#import "./ProductFragment.graphql"
+
+query ProductQuery($productId: Long!) {
+    product(id: $productId) {
+        id
+        name
+        urlForProductCatalog
+        image
+        ...ProductFragment
+    }
+}
