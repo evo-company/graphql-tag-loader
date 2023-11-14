@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { createFsFromVolume, Volume } = require('memfs');
 
-const compiler = (entry) => {
+const compiler = ({ entry, loader }) => {
     const compiler = webpack({
         mode: 'development',
         context: __dirname,
@@ -20,7 +20,7 @@ const compiler = (entry) => {
                     test: /\.(graphql|gql)$/,
                     exclude: /node_modules/,
                     use: {
-                        loader: '@evo/graphql-tag-loader',
+                        loader,
                     },
                 },
             ],
